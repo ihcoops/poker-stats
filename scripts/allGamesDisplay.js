@@ -90,7 +90,7 @@ function displayAllGames() {
   document.querySelector('h2').innerHTML = "";
   document.querySelector('.buttons-container').innerHTML = `
     <div class="buttons">
-      <a href="/index.html" class="button active">Standings</a>
+      <a href="index.html" class="button active">Standings</a>
       <p class="button passive">Games</p>
     </div>`
   
