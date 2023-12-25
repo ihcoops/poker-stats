@@ -124,16 +124,17 @@ a {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  font-weight: 700;
 }
 
 .button {
-  padding: 10px;
+  padding: 10px 14px;
   border-radius: 20px;
   text-decoration: none;
 }
 
 .active {
-  background-color: purple;
+  background-color: rgb(6, 67, 80);
   color: white;
 }
 
@@ -169,9 +170,11 @@ td {
   text-align: center;
 }
 
+/*
 th {
   text-align: left;
 }
+*/
 
 thead {
   th {
