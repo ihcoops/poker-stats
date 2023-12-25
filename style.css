@@ -102,8 +102,8 @@ h1 {
 h2 {
 color: white;
   text-align: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 12px;
+  font-size: 20px;
 }
 
 a {
@@ -148,7 +148,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  /*
   margin-top: 40px;
+  */
 }
 
 table {

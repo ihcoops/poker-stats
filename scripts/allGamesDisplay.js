@@ -87,7 +87,7 @@ function displayGame(date) {
 //CODE FOR DISPLAYING ALL GAMES WITH OPTION TO SELECT SPECIFIC GAME
 function displayAllGames() {
 
-  document.querySelector('h2').innerHTML = "";
+  document.querySelector('h2').innerHTML = "&nbsp";
   document.querySelector('.buttons-container').innerHTML = `
     <div class="buttons">
       <a href="./index.html" class="button active">Standings</a>
