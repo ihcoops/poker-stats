@@ -25,8 +25,8 @@ function displayGame(date) {
       <tr>
         <th>Rank</th>
         <th>Player</th>
-        <th>Total In</th>
-        <th>Total Out</th>
+        <th>In</th>
+        <th>Out</th>
         <th>Net</th>
       </tr>
     </thead>
