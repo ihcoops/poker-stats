@@ -1,21 +1,9 @@
 //game data
 export const games = [
     {
-        date: "12/17/2023",
-        players: ["MILES_ROBERTS", "ISAAC_COOPER", "TYLER_YAP"],
-        in: [100, 100, 150],
-        out: [0, 200, 150]
-    },
-    {
-        date: "12/19/2023",
-        players: ["MILES_ROBERTS", "ISAAC_COOPER", "BRYCE_TAYLOR"],
-        in: [50, 50, 75],
-        out: [0, 75, 100]
-    },
-    {
-        date: "12/21/2023",
-        players: ["MILES_ROBERTS", "ISAAC_COOPER", "REED_WILLIAMSON"],
-        in: [50, 50, 100],
-        out: [0, 75, 50]
+        date: "12/26/2023",
+        players: ["ISAAC_COOPER", "TYLER_YAP", "REED_WILLIAMSON", "JACK_FOX", "LUKE_WIELAND", "LUKE_WOLFORD", "JUSTIN_KIM"],
+        in: [100, 150, 108, 100, 100, 80, 50],
+        out: [97, 0, 0, 204, 125, 247, 28]
     }
 ];
