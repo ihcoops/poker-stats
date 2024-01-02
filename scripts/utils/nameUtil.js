@@ -7,7 +7,7 @@ const names = new Map([
     ["JACK_FOX", "Fox"],
     ["BRYCE_TAYLOR", "Bryce"],
     ["AARON_HANRAHAN", "Aaron"],
-    ["JUSTIN_KIM", "Kim"],
+    ["JUSTIN_KIM", "Kim*"],
     ["REED_WILLIAMSON", "Reed"],
     ["MILES_ROBERTS", "Miles"],
     ["NICK_GALLO", "Nick"],

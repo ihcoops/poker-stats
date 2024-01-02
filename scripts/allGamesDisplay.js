@@ -1,14 +1,15 @@
 import { games } from '../data/gameData.js';
+import { map, playerArray } from './totals.js';
 import { formatCurrency } from './utils/moneyUtil.js';
 import { getName } from './utils/nameUtil.js';
 
-displayAllGames();
-
+displayStandings();
 
 //CODE FOR DISPLAYING A SINGLE GAME
 function displayGame(date) {
 
   document.querySelector('h2').innerHTML = date;
+  document.querySelector('h3').innerHTML = "";
   document.querySelector('.buttons-container').innerHTML = `
     <div class="buttons">
       <a onclick="
@@ -80,18 +81,19 @@ function displayGame(date) {
 `;
 
   document.querySelector('.table-div').innerHTML = tableHTML;
-
 }
 
 
 //CODE FOR DISPLAYING ALL GAMES WITH OPTION TO SELECT SPECIFIC GAME
 function displayAllGames() {
-
+  console.log("HELLO");
   document.querySelector('h2').innerHTML = "&nbsp";
+  document.querySelector('h3').innerHTML = "";
   document.querySelector('.buttons-container').innerHTML = `
-    <div class="buttons">
-      <a href="./index.html" class="button active">Standings</a>
-      <p class="button passive">Games</p>
+
+  <div class="buttons">
+      <a class="button active link">Standings</a>
+      <a class="button passive">Games</a>
     </div>`
   
   let tableHTML =
@@ -136,6 +138,60 @@ function displayAllGames() {
     let link = document.querySelector(`#p${i}`);
     link.addEventListener("click", () => displayGame(link.innerHTML));
   }
+
+  let link = document.querySelector('.link');
+  link.addEventListener("click", () => displayStandings());
+}
+
+//CODE FOR DISPLAYING STANDINGS
+function displayStandings() {
+
+  document.querySelector('h2').innerHTML = "&nbsp";
+  document.querySelector('h3').innerHTML = "*player has officially retired";
+  document.querySelector('.buttons-container').innerHTML = `
+
+  <div class="buttons">
+      <a class="button passive">Standings</a>
+      <a class="button active link">Games</a>
+    </div>`
+  let tableHTML =
+`
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Player</th>
+      <th>Total In</th>
+      <th>Total Out</th>
+      <th>Net</th>
+    </tr>
+  </thead>
+  <tbody>
+`;
+
+for (let i = 0; i < playerArray.length; i++) {
+  let player = playerArray[i];
+  tableHTML += `
+  <tr>
+    <td>${i + 1}</td>
+    <td>${getName(player)}</td>
+    <td>${formatCurrency(map.get(player)[0])}</td>
+    <td>${formatCurrency(map.get(player)[1])}</td>
+    <td>${formatCurrency(map.get(player)[1] - map.get(player)[0])}</td>
+  </tr>
+  `
+}
+
+tableHTML += 
+`
+  </tbody>
+</table>
+`;
+
+document.querySelector('.table-div').innerHTML = tableHTML;
+
+let link = document.querySelector('.link');
+    link.addEventListener("click", () => displayAllGames());
 }
 
 
