@@ -1,3 +1,11 @@
+/*
+function to format display of money
+
+56 --> $56
+-123 --> -$123
+
+*/
+
 export function formatCurrency (amount) {
     let final = '';
     if(amount < 0) {
