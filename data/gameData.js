@@ -45,4 +45,21 @@ export const games = [
     in: [100, 50, 100, 100, 150, 100, 100, 200],
     out: [0, 64, 114, 0, 113, 123, 446, 40],
   },
+  {
+    date: "5/3/2024",
+    players: [
+      "REED_WILLIAMSON",
+      "AIDEN_WOSIACK",
+      "CONNOR_HENNEMAN",
+      "ISAAC_COOPER",
+      "LUKE_WIELAND",
+      "BRYCE_TAYLOR",
+      "JACK_FOX",
+      "LUKE_WOLFORD",
+      "AARON_HANRAHAN",
+      "TYLER_YAP",
+    ],
+    in: [150, 100, 200, 100, 100, 100, 100, 100, 100, 200],
+    out: [296, 138, 86, 0, 77, 168, 353, 0, 33, 111],
+  },
 ];
