@@ -49,7 +49,7 @@ export const games = [
     date: "5/3/2024",
     players: [
       "REED_WILLIAMSON",
-      "AIDEN_WOSIACK",
+      "AIDEN_WOSIAK",
       "CONNOR_HENNEMAN",
       "ISAAC_COOPER",
       "LUKE_WIELAND",
