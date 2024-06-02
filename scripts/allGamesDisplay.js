@@ -1,26 +1,26 @@
-import { games } from '../data/gameData.js';
-import { map, playerArray } from './totals.js';
-import { formatCurrency } from './utils/moneyUtil.js';
-import { getName } from './utils/nameUtil.js';
+import { games } from "../data/gameData.js";
+import { map, playerArray } from "./totals.js";
+import { formatCurrency } from "./utils/moneyUtil.js";
+import { getName } from "./utils/nameUtil.js";
 
 displayStandings();
 
 //CODE FOR DISPLAYING A SINGLE GAME
 function displayGame(date) {
-
-  document.querySelector('h2').innerHTML = date;
-  document.querySelector('h3').innerHTML = "";
-  document.querySelector('.buttons-container').innerHTML = `
+  document.querySelector("h2").innerHTML = date;
+  document.querySelector("h3").innerHTML = "";
+  document.querySelector(".buttons-container").innerHTML = `
     <div class="buttons">
       <a onclick="
       displayAllGames();
       "class="button active">Back</a>
-    </div>`
+    </div>`;
 
-    document.querySelector('.button').addEventListener("click", () => displayAllGames());
+  document
+    .querySelector(".button")
+    .addEventListener("click", () => displayAllGames());
 
-  let tableHTML =
-    `
+  let tableHTML = `
   <table>
     <thead>
       <tr>
@@ -52,7 +52,6 @@ function displayGame(date) {
   }
 
   function comparator(player1, player2) {
-
     let player1Net = map.get(player1)[1] - map.get(player1)[0];
     let player2Net = map.get(player2)[1] - map.get(player2)[0];
 
@@ -71,33 +70,30 @@ function displayGame(date) {
     <td>${formatCurrency(map.get(player)[1])}</td>
     <td>${formatCurrency(map.get(player)[1] - map.get(player)[0])}</td>
   </tr>
-  `
+  `;
   }
 
-  tableHTML +=
-    `
+  tableHTML += `
   </tbody>
 </table>
 `;
 
-  document.querySelector('.table-div').innerHTML = tableHTML;
+  document.querySelector(".table-div").innerHTML = tableHTML;
 }
-
 
 //CODE FOR DISPLAYING ALL GAMES WITH OPTION TO SELECT SPECIFIC GAME
 function displayAllGames() {
   console.log("HELLO");
-  document.querySelector('h2').innerHTML = "&nbsp";
-  document.querySelector('h3').innerHTML = "";
-  document.querySelector('.buttons-container').innerHTML = `
+  document.querySelector("h2").innerHTML = "&nbsp";
+  document.querySelector("h3").innerHTML = "";
+  document.querySelector(".buttons-container").innerHTML = `
 
   <div class="buttons">
       <a class="button active link">Standings</a>
       <a class="button passive">Games</a>
-    </div>`
-  
-  let tableHTML =
-    `
+    </div>`;
+
+  let tableHTML = `
 <table>
   <thead>
     <tr>
@@ -122,40 +118,36 @@ function displayAllGames() {
     <td>${numPlayers}</td>
     <td>${formatCurrency(sumPot)}</td>
   </tr>
-  `
+  `;
   }
 
-  tableHTML +=
-    `
+  tableHTML += `
   </tbody>
 </table>
 `;
 
-  document.querySelector('.table-div').innerHTML = tableHTML;
-
+  document.querySelector(".table-div").innerHTML = tableHTML;
 
   for (let i = 0; i < games.length; i++) {
     let link = document.querySelector(`#p${i}`);
     link.addEventListener("click", () => displayGame(link.innerHTML));
   }
 
-  let link = document.querySelector('.link');
+  let link = document.querySelector(".link");
   link.addEventListener("click", () => displayStandings());
 }
 
 //CODE FOR DISPLAYING STANDINGS
 function displayStandings() {
-
-  document.querySelector('h2').innerHTML = "&nbsp";
-  document.querySelector('h3').innerHTML = "*player has officially retired";
-  document.querySelector('.buttons-container').innerHTML = `
+  document.querySelector("h2").innerHTML = "&nbsp";
+  // document.querySelector('h3').innerHTML = "*player has officially retired";
+  document.querySelector(".buttons-container").innerHTML = `
 
   <div class="buttons">
       <a class="button passive">Standings</a>
       <a class="button active link">Games</a>
-    </div>`
-  let tableHTML =
-`
+    </div>`;
+  let tableHTML = `
 <table>
   <thead>
     <tr>
@@ -169,9 +161,9 @@ function displayStandings() {
   <tbody>
 `;
 
-for (let i = 0; i < playerArray.length; i++) {
-  let player = playerArray[i];
-  tableHTML += `
+  for (let i = 0; i < playerArray.length; i++) {
+    let player = playerArray[i];
+    tableHTML += `
   <tr>
     <td>${i + 1}</td>
     <td>${getName(player)}</td>
@@ -179,22 +171,16 @@ for (let i = 0; i < playerArray.length; i++) {
     <td>${formatCurrency(map.get(player)[1])}</td>
     <td>${formatCurrency(map.get(player)[1] - map.get(player)[0])}</td>
   </tr>
-  `
-}
+  `;
+  }
 
-tableHTML += 
-`
+  tableHTML += `
   </tbody>
 </table>
 `;
 
-document.querySelector('.table-div').innerHTML = tableHTML;
+  document.querySelector(".table-div").innerHTML = tableHTML;
 
-let link = document.querySelector('.link');
-    link.addEventListener("click", () => displayAllGames());
+  let link = document.querySelector(".link");
+  link.addEventListener("click", () => displayAllGames());
 }
-
-
-
-
-
