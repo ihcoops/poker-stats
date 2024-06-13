@@ -49,7 +49,7 @@ export const games = [
     date: "5/3/2024",
     players: [
       "REED_WILLIAMSON",
-      "AIDEN_WOSIAK",
+      // "AIDEN_WOSIAK",
       "CONNOR_HENNEMAN",
       "ISAAC_COOPER",
       "LUKE_WIELAND",
@@ -59,8 +59,10 @@ export const games = [
       "AARON_HANRAHAN",
       "TYLER_YAP",
     ],
-    in: [150, 100, 200, 100, 100, 100, 100, 100, 100, 200],
-    out: [296, 138, 86, 0, 77, 168, 353, 0, 33, 111],
+    // in: [150, 100, 200, 100, 100, 100, 100, 100, 100, 200],
+    // out: [296, 138, 86, 0, 77, 168, 353, 0, 33, 111],
+    in: [150, 200, 100, 100, 100, 100, 100, 100, 200],
+    out: [296, 86, 0, 77, 168, 353, 0, 33, 111],
   },
   {
     date: "5/16/2024",
