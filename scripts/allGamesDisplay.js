@@ -105,7 +105,7 @@ function displayAllGames() {
   <tbody>
 `;
 
-  for (let i = 0; i < games.length; i++) {
+  for (let i = games.length - 1; i >= 0; i--) {
     let date = games[i].date;
     let numPlayers = games[i].players.length;
     let sumPot = 0;
