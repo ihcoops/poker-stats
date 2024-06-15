@@ -109,7 +109,7 @@ export const games = [
     out: [183, 0, 7, 194, 91, 132],
   },
   {
-    date: "6/15/2024",
+    date: "6/14/2024",
     players: [
       "BRYCE_TAYLOR",
       "ISAAC_COOPER",
