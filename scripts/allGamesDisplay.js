@@ -1,7 +1,7 @@
 import { games } from "../data/gameData.js";
 import { map, playerArray } from "./totals.js";
 import { formatCurrency } from "./utils/moneyUtil.js";
-import { getName } from "./utils/nameUtil.js";
+import { getName, qualifiedPlayers } from "./utils/nameUtil.js";
 
 displayStandings();
 
@@ -162,8 +162,9 @@ function displayStandings() {
 `;
 
   for (let i = 0; i < playerArray.length; i++) {
-    let player = playerArray[i];
-    tableHTML += `
+    if (qualifiedPlayers.includes(playerArray[i])) {
+      let player = playerArray[i];
+      tableHTML += `
   <tr>
     <td>${i + 1}</td>
     <td>${getName(player)}</td>
@@ -172,6 +173,7 @@ function displayStandings() {
     <td>${formatCurrency(map.get(player)[1] - map.get(player)[0])}</td>
   </tr>
   `;
+    }
   }
 
   tableHTML += `

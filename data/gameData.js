@@ -49,7 +49,7 @@ export const games = [
     date: "5/3/2024",
     players: [
       "REED_WILLIAMSON",
-      // "AIDEN_WOSIAK",
+      "AIDEN_WOSIAK",
       "CONNOR_HENNEMAN",
       "ISAAC_COOPER",
       "LUKE_WIELAND",
@@ -59,10 +59,10 @@ export const games = [
       "AARON_HANRAHAN",
       "TYLER_YAP",
     ],
-    // in: [150, 100, 200, 100, 100, 100, 100, 100, 100, 200],
-    // out: [296, 138, 86, 0, 77, 168, 353, 0, 33, 111],
-    in: [150, 200, 100, 100, 100, 100, 100, 100, 200],
-    out: [296, 86, 0, 77, 168, 353, 0, 33, 111],
+    in: [150, 100, 200, 100, 100, 100, 100, 100, 100, 200],
+    out: [296, 138, 86, 0, 77, 168, 353, 0, 33, 111],
+    // in: [150, 200, 100, 100, 100, 100, 100, 100, 200],
+    // out: [296, 86, 0, 77, 168, 353, 0, 33, 111],
   },
   {
     date: "5/16/2024",
@@ -147,7 +147,7 @@ export const games = [
       "JACK_FOX",
       "TYLER_YAP",
       "REED_WILLIAMSON",
-      // "JARED" in for 100 out 20
+      "JARED_PLACE",
     ],
     in: [100, 200, 190, 200, 150, 100],
     out: [720, 200, 0, 0, 0, 20],
@@ -164,9 +164,9 @@ export const games = [
       "ISAAC_COOPER",
       "MCKAY_WHITAKER",
       "LUKE_WOLFORD",
-      // CADEN
+      "CADEN",
     ],
-    in: [100, 100, 100, 100, 257, 100, 100, 100, 200],
-    out: [350, 201, 108, 430, 0, 0, 217, 0, 0],
+    in: [100, 100, 100, 100, 257, 100, 100, 100, 200, 100],
+    out: [350, 201, 108, 430, 0, 0, 217, 0, 0, 0],
   },
 ];
