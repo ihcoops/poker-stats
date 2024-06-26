@@ -14,6 +14,7 @@ const names = new Map([
   ["AIDEN_WOSIAK", "Wos"],
   ["CONNOR_HENNEMAN", "Henne"],
   ["TANNER_HAUPTMAN", "Tanner"],
+  ["MCKAY_WHITAKER", "McKay"],
 ]);
 
 export function getName(name) {

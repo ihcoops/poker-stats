@@ -147,7 +147,7 @@ export const games = [
       "JACK_FOX",
       "TYLER_YAP",
       "REED_WILLIAMSON",
-      // "JARED"
+      // "JARED" in for 100 out 20
     ],
     in: [100, 200, 190, 200, 150, 100],
     out: [720, 200, 0, 0, 0, 20],
