@@ -139,4 +139,34 @@ export const games = [
     in: [100, 100, 150, 300, 100, 100, 100, 300, 100],
     out: [113, 65, 102, 513, 226, 330, 0, 0, 0],
   },
+  {
+    date: "6/18/2024",
+    players: [
+      "TANNER_HAUPTMAN",
+      "LUKE_WIELAND",
+      "JACK_FOX",
+      "TYLER_YAP",
+      "REED_WILLIAMSON",
+      // "JARED"
+    ],
+    in: [100, 200, 190, 200, 150, 100],
+    out: [720, 200, 0, 0, 0, 20],
+  },
+  {
+    date: "6/24/2024",
+    players: [
+      "LUKE_WIELAND",
+      "JACK_FOX",
+      "MILES_ROBERTS",
+      "TYLER_YAP",
+      "TANNER_HAUPTMAN",
+      "REED_WILLIAMSON",
+      "ISAAC_COOPER",
+      "MCKAY_WHITAKER",
+      "LUKE_WOLFORD",
+      // CADEN
+    ],
+    in: [100, 100, 100, 100, 257, 100, 100, 100, 200],
+    out: [350, 201, 108, 430, 0, 0, 217, 0, 0],
+  },
 ];
